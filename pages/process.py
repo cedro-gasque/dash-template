@@ -46,8 +46,9 @@ pipeline = make_pipeline(
                   verbosity=3),
     verbose=True
 )
-
 ```
+
+I ended up with some
             """
         )),
 

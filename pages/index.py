@@ -16,24 +16,14 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Value Proposition
+            ## Who Won?
 
             "Who Won?" is an app that predicts which team won a DoTA 2 game based on the final results of a game.
             """
         ),
         dcc.Link(dbc.Button('Who Won?', color='primary'), href='/predictions')
     ],
-    md=4,
+    md=12,
 )
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
-
-column2 = dbc.Col(
-    [
-        dcc.Graph(figure=fig),
-    ]
-)
-
-layout = dbc.Row([column1, column2])
+layout = dbc.Row([column1])
